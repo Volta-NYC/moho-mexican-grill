@@ -2,173 +2,137 @@ import Link from "next/link"
 
 import { PageShell } from "@/components/page-shell"
 import { Photo } from "@/components/photo"
-import { SectionHeading } from "@/components/section-heading"
-import { hours, images, menuPreview, reviews, site, specials, storyParagraphs } from "@/lib/content"
+import { images, site } from "@/lib/content"
 
-const ticker = ["Fresh Mexican grill", "Burritos", "Bowls", "Tacos", "Astoria and Bayside"]
+const menuCategories = [
+  {
+    href: "/menu",
+    image: images.plate,
+    title: "Build Your Own"
+  },
+  {
+    href: "/tacos",
+    image: images.oysters,
+    title: "birria"
+  },
+  {
+    href: "/menu",
+    image: images.pasta,
+    title: "side orders"
+  },
+  {
+    href: "/menu",
+    image: images.wineRoom,
+    title: "desserts"
+  }
+]
+
+const faqs = [
+  {
+    answer:
+      "Yes. Choose your base, protein, toppings, sauces, and extras to build a bowl, burrito, tacos, or another favorite exactly your way.",
+    question: "Can I build my meal exactly how I like it?"
+  },
+  {
+    answer:
+      "Moho has locations in Astoria and Bayside, Queens. Both serve fresh Mexican favorites daily from 10:30 AM to 11:30 PM.",
+    question: "Where are you located & what are your hours?"
+  },
+  {
+    answer:
+      "Build Your Own Bowls and Birria Tacos are guest favorites: one for customization, the other for rich slow-cooked flavor.",
+    question: "What are your most popular menu items?"
+  },
+  {
+    answer:
+      "Yes. Moho is fully Halal and Zabiha certified.",
+    question: "Is your food halal?"
+  },
+  {
+    answer:
+      "Yes. Moho offers catering for parties, events, offices, and special occasions through the catering order flow.",
+    question: "Do you cater for parties and events?"
+  }
+]
 
 export default function HomePage() {
   return (
     <PageShell>
-      <main>
-        <section className="relative min-h-screen overflow-hidden bg-ink pt-24 text-cream">
-          <div className="absolute inset-0 opacity-42">
-            <Photo alt="Moho Mexican Grill spread" src={images.hero} />
-          </div>
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,17,14,0.96),rgba(19,17,14,0.72),rgba(19,17,14,0.18))]" />
-          <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.8fr] lg:px-8">
-            <div>
-              <p className="eyebrow text-gold">Astoria and Bayside, Queens</p>
-              <h1 className="mt-5 max-w-5xl font-heading text-6xl font-black leading-[0.88] sm:text-8xl lg:text-9xl">
-                Fresh Mexican Favorites
-              </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-cream/76">
-                Moho Mexican Grill serves made-to-order burritos, bowls, tacos, quesadillas, nachos, and catering spreads across Queens.
-              </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <a className="button button-gold" href={site.orderUrl}>Order Online</a>
-                <Link className="button button-outline-light" href="/menu">View Menu</Link>
-                <a className="button button-ghost-light" href={site.mapsUrl}>Find Locations</a>
-              </div>
-            </div>
-
-            <div className="relative hidden lg:block">
-              <div className="rotate-2 overflow-hidden rounded-[2rem] border border-cream/20 bg-cream/8 p-3 shadow-2xl shadow-black/40">
-                <Photo alt="Moho plated meal" className="aspect-[4/5] rounded-[1.45rem]" src={images.plate} />
-              </div>
-              <div className="absolute -bottom-8 -left-10 max-w-xs -rotate-3 bg-tomato p-6 shadow-2xl shadow-black/35">
-                <p className="font-heading text-4xl font-black leading-none">Open Daily</p>
-                <p className="mt-2 text-sm font-bold uppercase tracking-[0.14em] text-cream/75">from 10:30 AM to 11:30 PM</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="overflow-hidden border-y border-ink bg-gold py-4 text-ink">
-          <div className="ticker-track flex min-w-max gap-8 text-sm font-black uppercase tracking-[0.22em]">
-            {[...ticker, ...ticker, ...ticker].map((item, index) => (
-              <span className="flex items-center gap-8" key={`${item}-${index}`}>
-                {item}
-                <span className="h-2 w-2 rounded-full bg-tomato" />
-              </span>
-            ))}
-          </div>
-        </section>
-
-        <section className="bg-paper px-4 py-18 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3">
-            <InfoCard className="reveal-left" title="Find us" lines={[site.addressLine1, site.addressLine2]} />
-            <InfoCard className="reveal-soft reveal-delay-1" title="Hours" lines={hours.map((item) => `${item.label}: ${item.value}`)} />
-            <InfoCard className="reveal-right reveal-delay-2" title="Reach us" lines={[site.email, site.phone]} />
-          </div>
-        </section>
-
-        <section className="bg-cream px-4 py-24 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.85fr_1fr] lg:items-center">
-            <div className="reveal-on-scroll reveal-left">
-              <SectionHeading eyebrow="About" title="A fresh Queens stop built for every craving." text={storyParagraphs.slice(0, 3).join(" ")} />
-              <Link className="button button-dark mt-8" href="/contact">Find a Location</Link>
-            </div>
-            <div className="reveal-on-scroll reveal-right relative">
-              <div className="overflow-hidden rounded-[2rem] border-8 border-paper shadow-2xl shadow-ink/18">
-                <Photo alt="Moho brand artwork" className="aspect-[5/4]" src={images.diningRoom} />
-              </div>
-              <div className="absolute -bottom-8 right-8 max-w-sm bg-ink p-6 text-cream">
-                <p className="font-heading text-3xl font-black leading-tight">Build it your way, from quick lunches to catered spreads.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-ink px-4 py-24 text-cream sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="reveal-on-scroll reveal-soft flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-              <SectionHeading eyebrow="Our Menu" light title="Burritos, bowls, tacos, and more." text="Start with your base, choose a protein, then layer in rice, beans, fresh toppings, salsa, and sauces." />
-              <Link className="button button-gold shrink-0" href="/menu">See Menus</Link>
-            </div>
-            <div className="mt-12 grid gap-5 md:grid-cols-3">
-              {menuPreview.map((group, index) => (
-                <article className={`reveal-on-scroll ${index === 0 ? "reveal-left" : index === 1 ? "reveal-soft reveal-delay-1" : "reveal-right reveal-delay-2"} group border border-cream/14 bg-cream/[0.04] p-7 transition hover:-translate-y-1 hover:bg-cream/[0.08]`} key={group.title}>
-                  <p className="font-heading text-6xl font-black text-tomato/80">0{index + 1}</p>
-                  <h3 className="mt-6 font-heading text-3xl font-black">{group.title}</h3>
-                  <ul className="mt-5 space-y-3 text-sm leading-6 text-cream/70">
-                    {group.items.map((item) => (
-                      <li className="border-t border-cream/12 pt-3" key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-tomato px-4 py-24 text-cream sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="reveal-on-scroll reveal-soft flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-              <SectionHeading eyebrow="Featured" light title="Order online, cater the group, find Moho near you." text="The same scaffold highlights Moho's main actions: ordering, catering, and Queens locations." />
-              <Link className="button button-light shrink-0" href="/specials">View Featured</Link>
-            </div>
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {specials.map((item, index) => (
-                <Link className={`special-mini reveal-on-scroll ${index % 3 === 0 ? "reveal-left" : index % 3 === 1 ? "reveal-soft reveal-delay-1" : "reveal-right reveal-delay-2"} group`} href={item.href || "/specials"} key={item.title}>
-                  <Photo alt={item.title} className="absolute inset-0 opacity-55 transition duration-500 group-hover:scale-105 group-hover:opacity-72" src={item.image} />
-                  <span className="relative mt-auto block">
-                    <span className="block text-xs font-black uppercase tracking-[0.2em] text-gold">{item.subtitle}</span>
-                    <span className="mt-2 block font-heading text-3xl font-black leading-none">{item.title}</span>
-                  </span>
-                </Link>
-              ))}
-            </div>
+      <main className="bg-paper text-ink">
+        <section className="moho-hero relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24 text-center">
+          <Photo alt="A tray of Mexican food with tacos, salads, corn, sauces, and cilantro." className="moho-hero-image absolute inset-0" src={images.hero} />
+          <div className="absolute inset-0 bg-black/18" />
+          <div className="moho-fade-up relative z-10 mx-auto max-w-6xl py-28">
+            <h1 className="text-[clamp(4.2rem,13vw,12rem)] font-black leading-[0.83] tracking-normal text-gold">
+              authentic mexican flavors
+            </h1>
+            <p className="mx-auto mt-8 max-w-3xl text-xl font-semibold leading-8 text-cream sm:text-2xl">
+              Your Way, All Day at Moho Mexican Grill
+            </p>
+            <a className="button button-gold mt-9" href={site.orderUrl}>Order Now</a>
           </div>
         </section>
 
         <section className="bg-paper px-4 py-24 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1fr]">
-            <div className="reveal-on-scroll reveal-left">
-              <SectionHeading eyebrow="Kind Words" title="Fresh, fast, and built your way." text="Guest notes and placeholders for Moho reviews can be swapped in as the site gets finished." />
+          <div className="mx-auto max-w-7xl">
+            <div className="moho-fade-up text-center">
+              <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-tomato">The Menu</p>
+              <h2 className="mx-auto mt-5 max-w-4xl text-4xl font-black leading-[1.02] sm:text-6xl">
+                MOHO has something to satisfy every palate and dietary need.
+              </h2>
+              <p className="mx-auto mt-5 max-w-2xl text-lg font-medium leading-8 text-ink/68">
+                Enjoy our wide selection of customizable bowls, burritos, tacos, birria, sides, and sweets.
+              </p>
             </div>
-            <div className="grid gap-5">
-              {reviews.map((review, index) => (
-                <blockquote className={`reveal-on-scroll ${index % 2 === 0 ? "reveal-right" : "reveal-soft reveal-delay-1"} border-l-4 border-tomato bg-cream p-6 shadow-lg shadow-ink/5`} key={review.author}>
-                  <p className="text-lg leading-8 text-ink/78">"{review.quote}"</p>
-                  <cite className="mt-4 block text-sm font-black uppercase tracking-[0.18em] text-tomato">- {review.author}</cite>
-                </blockquote>
+
+            <div className="mt-14 grid gap-5 md:grid-cols-4">
+              {menuCategories.map((item, index) => (
+                <Link className="moho-menu-card moho-fade-up" href={item.href} key={item.title}>
+                  <Photo alt={item.title} className="absolute inset-0 transition duration-700" src={item.image} />
+                  <span>{item.title}</span>
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Link className="button button-dark" href="/menu">See Our Full Menu</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-cream px-4 py-24 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div className="reveal-on-scroll reveal-left lg:sticky lg:top-28">
+              <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-tomato">Questions</p>
+              <h2 className="mt-5 text-5xl font-black leading-[0.95] sm:text-7xl">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <div className="grid gap-4">
+              {faqs.map((faq, index) => (
+                <details className="moho-faq moho-fade-up" key={faq.question} open={index === 0}>
+                  <summary>{faq.question}</summary>
+                  <p>{faq.answer}</p>
+                </details>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="grid bg-black md:grid-cols-4">
-          {[images.pasta, images.oysters, images.wineRoom, images.cateringParty].map((src, index) => (
-            <div className={`reveal-on-scroll reveal-soft ${index % 2 === 0 ? "" : "reveal-delay-1"} aspect-[4/5] overflow-hidden`} key={src}>
-              <Photo alt={`Moho gallery image ${index + 1}`} className="transition duration-700 hover:scale-105" src={src} />
-            </div>
-          ))}
-        </section>
-
-        <section className="bg-cream px-4 py-24 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-            <SectionHeading eyebrow="Visit" title="Find Moho in Queens." text="Moho Mexican Grill has convenient Astoria and Bayside locations." />
-            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-              <a className="button button-dark" href={site.mapsUrl}>Get Directions</a>
-              <a className="button button-outline-dark" href={site.orderUrl}>Order Online</a>
-            </div>
+        <section className="relative overflow-hidden bg-ink px-4 py-28 text-cream sm:px-6 lg:px-8">
+          <div className="absolute inset-0 opacity-32">
+            <Photo alt="Moho catering spread" src={images.cateringHero} />
+          </div>
+          <div className="absolute inset-0 bg-ink/62" />
+          <div className="moho-fade-up relative z-10 mx-auto max-w-5xl text-center">
+            <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-gold">Hosting a Party or Event?</p>
+            <h2 className="mt-6 text-5xl font-black leading-[0.95] sm:text-7xl">
+              Contact us for all your Catering needs!
+            </h2>
+            <a className="button button-gold mt-9" href={site.cateringExternalUrl}>Order Catering</a>
           </div>
         </section>
       </main>
     </PageShell>
-  )
-}
-
-function InfoCard({ className = "", lines, title }: { className?: string; lines: string[]; title: string }) {
-  return (
-    <article className={`reveal-on-scroll border border-ink bg-cream p-6 shadow-[8px_8px_0_#1f1b16] ${className}`}>
-      <p className="text-xs font-black uppercase tracking-[0.22em] text-tomato">{title}</p>
-      <div className="mt-4 space-y-1 font-heading text-2xl font-black leading-tight text-ink">
-        {lines.map((line) => (
-          <p key={line}>{line}</p>
-        ))}
-      </div>
-    </article>
   )
 }

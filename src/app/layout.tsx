@@ -1,20 +1,20 @@
 import type { Metadata } from "next"
-import { Cormorant_Garamond, DM_Sans } from "next/font/google"
+import { Onest } from "next/font/google"
 
 import { site } from "@/lib/content"
 
 import "./globals.css"
 
-const headingFont = Cormorant_Garamond({
+const brandFont = Onest({
   subsets: ["latin"],
-  variable: "--font-heading-family",
-  weight: ["400", "500", "600", "700"]
+  variable: "--font-brand-family",
+  weight: ["400", "500", "600", "700", "800"]
 })
 
-const bodyFont = DM_Sans({
+const bodyFont = Onest({
   subsets: ["latin"],
   variable: "--font-body-family",
-  weight: ["400", "500", "600", "700"]
+  weight: ["400", "500", "600", "700", "800"]
 })
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className="notranslate" lang="en" translate="no">
-      <body className={`${headingFont.variable} ${bodyFont.variable} bg-paper font-body text-ink antialiased`}>
+      <body className={`${brandFont.variable} ${bodyFont.variable} bg-paper font-body text-ink antialiased`}>
         {children}
       </body>
     </html>

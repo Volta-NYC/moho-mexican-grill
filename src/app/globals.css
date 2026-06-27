@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #f4ead6;
-  --color-primary: #1f1b16;
+  --color-background: #f0dfbd;
+  --color-primary: #15130d;
+  --font-heading-family: var(--font-brand-family);
 }
 
 * {
@@ -34,8 +35,8 @@ img {
 }
 
 ::selection {
-  background: #b53a2d;
-  color: #fffaf0;
+  background: #d94a20;
+  color: #fff4d7;
 }
 
 .eyebrow {
@@ -68,58 +69,58 @@ img {
 }
 
 .button-gold {
-  background: #f0c35a;
-  color: #1f1b16;
+  background: #f4bf24;
+  color: #15130d;
 }
 
 .button-gold:hover {
-  background: #fff8e8;
+  background: #fff4d7;
 }
 
 .button-dark {
-  background: #1f1b16;
-  color: #fff8e8;
+  background: #15130d;
+  color: #fff4d7;
 }
 
 .button-dark:hover {
-  background: #b53a2d;
+  background: #d94a20;
 }
 
 .button-light {
-  background: #fff8e8;
-  color: #1f1b16;
+  background: #fff4d7;
+  color: #15130d;
 }
 
 .button-light:hover {
-  background: #f0c35a;
+  background: #f4bf24;
 }
 
 .button-outline-light {
-  border: 1px solid rgb(255 248 232 / 0.42);
-  color: #fff8e8;
+  border: 1px solid rgb(255 244 215 / 0.42);
+  color: #fff4d7;
 }
 
 .button-outline-light:hover {
-  background: #fff8e8;
-  color: #1f1b16;
+  background: #fff4d7;
+  color: #15130d;
 }
 
 .button-outline-dark {
-  border: 1px solid rgb(31 27 22 / 0.32);
-  color: #1f1b16;
+  border: 1px solid rgb(21 19 13 / 0.32);
+  color: #15130d;
 }
 
 .button-outline-dark:hover {
-  background: #1f1b16;
-  color: #fff8e8;
+  background: #15130d;
+  color: #fff4d7;
 }
 
 .button-ghost-light {
-  color: #fff8e8;
+  color: #fff4d7;
 }
 
 .button-ghost-light:hover {
-  color: #f0c35a;
+  color: #f4bf24;
 }
 
 .footer-title {
@@ -127,7 +128,7 @@ img {
   font-weight: 900;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgb(240 195 90 / 0.9);
+  color: rgb(244 191 36 / 0.9);
 }
 
 .nav-link {
@@ -159,6 +160,131 @@ img {
 
 .nav-link:hover::before {
   transform: translateX(0);
+}
+
+.nav-link-dark {
+  color: rgb(21 19 13 / 0.76);
+}
+
+.nav-link-dark::before {
+  background: #d94a20;
+}
+
+.nav-link-dark:hover {
+  color: #15130d;
+}
+
+.moho-hero {
+  background: #15130d;
+}
+
+.moho-hero-image {
+  animation: moho-kenburns 18s ease-in-out infinite alternate;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.moho-fade-up {
+  animation: moho-fade-up 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.moho-menu-card {
+  align-items: end;
+  background: #15130d;
+  color: #fff4d7;
+  display: flex;
+  min-height: 22rem;
+  overflow: hidden;
+  padding: 1.35rem;
+  position: relative;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.moho-menu-card::after {
+  background: linear-gradient(to top, rgb(0 0 0 / 0.76), rgb(0 0 0 / 0.05));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.moho-menu-card img {
+  transform: scale(1.02);
+}
+
+.moho-menu-card span {
+  color: #fff4d7;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  position: relative;
+  text-transform: lowercase;
+  z-index: 1;
+}
+
+.moho-menu-card:hover {
+  box-shadow: 10px 10px 0 #d94a20;
+  transform: translateY(-5px);
+}
+
+.moho-menu-card:hover img {
+  transform: scale(1.1);
+}
+
+.moho-faq {
+  background: #f0dfbd;
+  border: 1px solid rgb(21 19 13 / 0.14);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.moho-faq summary {
+  cursor: pointer;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  font-weight: 900;
+  line-height: 1.05;
+  list-style: none;
+}
+
+.moho-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.moho-faq summary::after {
+  content: "+";
+  float: right;
+  font-weight: 800;
+  margin-left: 1rem;
+}
+
+.moho-faq[open] summary::after {
+  content: "-";
+}
+
+.moho-faq p {
+  color: rgb(21 19 13 / 0.68);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.7;
+  margin: 1rem 0 0;
+  max-width: 58rem;
+}
+
+@keyframes moho-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moho-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
 }
 
 .ticker-track {

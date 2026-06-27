@@ -2,7 +2,7 @@ export const site = {
   name: "Moho Mexican Grill",
   legalName: "Moho Mexican Grill",
   description:
-    "Fresh Mexican grill favorites, catering, and easy online ordering from Moho Mexican Grill in Queens.",
+    "Authentic Mexican flavors, fully Halal and Zabiha certified, with build-your-own bowls, birria tacos, catering, and easy online ordering in Queens.",
   addressLine1: "Astoria and Bayside",
   addressLine2: "Queens, NY",
   email: "hello@mohoeats.com",
@@ -11,6 +11,7 @@ export const site = {
   emailHref: "mailto:hello@mohoeats.com",
   orderUrl: "https://order.online/business/moho-mexican-grill-589533",
   giftCardsUrl: "https://mohoeats.com",
+  logoUrl: "https://images.squarespace-cdn.com/content/v1/69fa26e3be38e053e4967e1e/9f38ea54-2c1a-4339-b254-7fe8e95489a8/Moho-Wordmark-MohoG.png?format=1500w",
   facebookUrl: "https://www.facebook.com/mohoeats/",
   instagramUrl: "https://www.instagram.com/mohomexicangrill/",
   tiktokUrl: "https://www.tiktok.com/@mohomexicangrill",
@@ -69,7 +70,7 @@ export const menuPreview = [
   },
   {
     title: "Moho Favorites",
-    items: ["Quesadillas", "Nachos", "Fresh toppings"]
+    items: ["Birria tacos", "Quesadillas", "Fresh toppings"]
   },
   {
     title: "For Groups",
@@ -81,7 +82,7 @@ export const specials = [
   {
     title: "Order Online",
     subtitle: "Pickup or delivery",
-    details: ["Fresh Mexican favorites made to order", "Easy online ordering", "Available from both Queens locations"],
+    details: ["Authentic Mexican flavors made to order", "Easy online ordering", "Available from both Queens locations"],
     href: site.orderUrl,
     cta: "Start an Order",
     image: images.takeout
@@ -97,7 +98,7 @@ export const specials = [
   {
     title: "Two Queens Locations",
     subtitle: "Astoria and Bayside",
-    details: ["Convenient neighborhood stops", "Open daily from 10:30 AM to 11:30 PM", "Fresh, fast, and built your way"],
+    details: ["Convenient neighborhood stops", "Open daily from 10:30 AM to 11:30 PM", "Fully Halal and Zabiha certified"],
     href: "/contact",
     cta: "Find Moho",
     image: images.hero
@@ -105,11 +106,12 @@ export const specials = [
 ]
 
 export const storyParagraphs = [
-  "Moho Mexican Grill serves fresh, made-to-order Mexican favorites from Queens.",
-  "The menu is built for quick weeknight dinners, lunch breaks, and group orders.",
+  "Moho Mexican Grill serves authentic Mexican flavors from Queens.",
+  "The menu is built for quick weeknight dinners, lunch breaks, group orders, and fully customizable cravings.",
   "Guests can build burritos, bowls, tacos, quesadillas, nachos, and catering spreads with the flavors they love.",
   "Moho has convenient locations in Astoria and Bayside.",
-  "Online ordering makes pickup, delivery, and catering simple."
+  "Online ordering makes pickup, delivery, and catering simple.",
+  "Moho is fully Halal and Zabiha certified."
 ]
 
 export const catering = {

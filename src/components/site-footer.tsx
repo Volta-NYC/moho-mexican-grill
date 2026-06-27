@@ -4,14 +4,14 @@ import { hours, navItems, site } from "@/lib/content"
 
 export function SiteFooter() {
   return (
-    <footer className="bg-black px-4 py-14 text-cream sm:px-6 lg:px-8">
+    <footer className="bg-ink px-4 py-14 text-cream sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.3fr_0.7fr_0.7fr]">
         <div>
-          <p className="font-heading text-4xl font-bold">{site.name}</p>
+          <img alt={site.name} className="h-14 w-auto brightness-0 invert" src={site.logoUrl} />
           <p className="mt-4 max-w-xl text-base leading-7 text-cream/68">{site.description}</p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a className="button button-gold" href={site.orderUrl}>Order Online</a>
-            <a className="button button-outline-light" href={site.phoneHref}>Call {site.phone}</a>
+            <a className="button button-outline-light" href={site.cateringExternalUrl}>Order Catering</a>
           </div>
         </div>
 
@@ -23,7 +23,7 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
-            <a className="transition hover:text-cream" href={site.giftCardsUrl}>Gift Cards</a>
+            <a className="transition hover:text-cream" href={site.tiktokUrl}>TikTok</a>
           </div>
         </div>
 
@@ -49,13 +49,13 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-cream/10 pt-6 text-xs uppercase tracking-[0.18em] text-cream/45 sm:flex-row sm:items-center sm:justify-between">
-        <p>©2025 All Rights Reserved.</p>
+        <p>©2026 All Rights Reserved.</p>
         <div className="flex gap-5">
           <a className="transition hover:text-cream" href={site.facebookUrl}>Facebook</a>
           <a className="transition hover:text-cream" href={site.instagramUrl}>Instagram</a>
+          <a className="transition hover:text-cream" href={site.tiktokUrl}>TikTok</a>
         </div>
       </div>
     </footer>
   )
 }
-
