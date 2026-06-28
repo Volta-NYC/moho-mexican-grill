@@ -131,17 +131,19 @@ img {
   color: rgb(159 207 72 / 0.95);
 }
 
-.site-header-home {
-  background: rgb(240 223 189 / 0.94);
-  border-color: rgb(21 19 13 / 0.1);
+.site-header-transparent {
+  background: transparent;
   color: #15130d;
+  text-shadow: 0 1px 18px rgb(255 244 215 / 0.28);
 }
 
-.site-header-contrast {
-  background: rgb(255 255 255 / 0.97);
-  border-color: rgb(255 244 215 / 0.24);
-  box-shadow: 0 14px 32px rgb(0 0 0 / 0.12);
-  color: #15130d;
+.site-header-on-dark {
+  color: #fff4d7;
+  text-shadow: 0 1px 18px rgb(0 0 0 / 0.56);
+}
+
+.site-header-on-dark img {
+  filter: drop-shadow(0 1px 10px rgb(0 0 0 / 0.45));
 }
 
 .nav-link {
@@ -185,6 +187,36 @@ img {
 
 .nav-link-dark:hover {
   color: #007a68;
+}
+
+.nav-link-light {
+  color: rgb(255 244 215 / 0.88);
+}
+
+.nav-link-light::before {
+  background: #9fcf48;
+}
+
+.nav-link-light:hover {
+  color: #ffffff;
+}
+
+.site-mobile-link-dark {
+  color: rgb(21 19 13 / 0.78);
+  transition: color 200ms ease;
+}
+
+.site-mobile-link-dark:hover {
+  color: #007a68;
+}
+
+.site-mobile-link-light {
+  color: rgb(255 244 215 / 0.9);
+  transition: color 200ms ease;
+}
+
+.site-mobile-link-light:hover {
+  color: #ffffff;
 }
 
 .moho-hero {
