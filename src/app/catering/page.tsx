@@ -35,7 +35,7 @@ export default function CateringPage() {
             <Photo alt="Moho catering spread" src={images.cateringHero} />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/35" />
-          <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.82fr] lg:items-end">
+          <div className="hero-readable relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.82fr] lg:items-end">
             <div>
               <span className="moho-green-tag mb-7">Fresh group spreads</span>
               <SectionHeading eyebrow="Catering" light title={catering.title} text={catering.paragraphs.slice(0, 2).join(" ")} />

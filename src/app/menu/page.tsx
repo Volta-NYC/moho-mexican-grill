@@ -47,9 +47,9 @@ export default function MenuPage() {
       <main className="bg-paper text-ink">
         <section className="relative flex min-h-[78vh] items-center justify-center overflow-hidden px-4 pt-24 text-center">
           <Photo alt="Assorted Moho Mexican Grill dishes on a beige background." className="absolute inset-0" src={images.menuBanner} />
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="relative z-10 mx-auto max-w-5xl py-24">
-            <h1 className="text-[clamp(4rem,12vw,11rem)] font-black leading-[0.82] text-cream drop-shadow-[0_4px_22px_rgba(0,0,0,0.45)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18),rgba(0,0,0,0.5)),linear-gradient(180deg,rgba(0,0,0,0.22),rgba(0,0,0,0.44))]" />
+          <div className="hero-readable relative z-10 mx-auto max-w-5xl py-24">
+            <h1 className="text-[clamp(4rem,12vw,11rem)] font-black leading-[0.82] text-cream">
               OUR MENU
             </h1>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

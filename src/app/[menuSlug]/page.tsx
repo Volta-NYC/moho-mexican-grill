@@ -76,7 +76,7 @@ export default async function MenuDetailPage({ params }: MenuRouteProps) {
             <Photo alt={page.title} src={page.image} />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/88 to-ink/30" />
-          <div className="relative mx-auto max-w-7xl">
+          <div className="hero-readable relative mx-auto max-w-7xl">
             <SectionHeading eyebrow="Moho Menu" light title={page.title} text="Starter menu information for Moho Mexican Grill, organized for easier browsing." />
             <div className="mt-8 flex flex-wrap gap-3">
               {menuLinks.map((link) => (

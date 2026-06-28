@@ -61,8 +61,8 @@ export default function HomePage() {
       <main className="bg-paper text-ink">
         <section className="moho-hero relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24 text-center">
           <Photo alt="A tray of Mexican food with tacos, salads, corn, sauces, and cilantro." className="moho-hero-image absolute inset-0" src={images.hero} />
-          <div className="absolute inset-0 bg-black/18" />
-          <div className="moho-fade-up relative z-10 mx-auto max-w-6xl py-28">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18),rgba(0,0,0,0.52)),linear-gradient(180deg,rgba(0,0,0,0.28),rgba(0,0,0,0.46))]" />
+          <div className="hero-readable moho-fade-up relative z-10 mx-auto max-w-6xl py-28">
             <h1 className="text-[clamp(4.2rem,13vw,12rem)] font-black leading-[0.83] tracking-normal text-gold">
               authentic mexican flavors
             </h1>

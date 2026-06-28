@@ -146,6 +146,17 @@ img {
   filter: drop-shadow(0 1px 10px rgb(0 0 0 / 0.45));
 }
 
+.hero-readable h1,
+.hero-readable h2,
+.hero-readable p,
+.hero-readable span {
+  text-shadow: 0 3px 24px rgb(0 0 0 / 0.66), 0 1px 3px rgb(0 0 0 / 0.72);
+}
+
+.hero-readable .button {
+  box-shadow: 0 12px 34px rgb(0 0 0 / 0.28);
+}
+
 .nav-link {
   color: rgb(255 248 232 / 0.72);
   display: inline-flex;

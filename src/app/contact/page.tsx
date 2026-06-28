@@ -29,8 +29,8 @@ export default function ContactPage() {
       <main className="bg-paper text-ink">
         <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-4 pt-24 text-center text-cream">
           <Photo alt="Moho Mexican Grill storefront at night" className="absolute inset-0" src={images.locationHero} />
-          <div className="absolute inset-0 bg-black/48" />
-          <div className="relative z-10 mx-auto max-w-5xl py-24">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18),rgba(0,0,0,0.58)),linear-gradient(180deg,rgba(0,0,0,0.32),rgba(0,0,0,0.5))]" />
+          <div className="hero-readable relative z-10 mx-auto max-w-5xl py-24">
             <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-gold">Moho Mexican Grill</p>
             <h1 className="mt-5 text-[clamp(4rem,11vw,10rem)] font-black leading-[0.82]">
               Hours & Locations
