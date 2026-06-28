@@ -671,10 +671,28 @@ img {
   background: #fff4d7;
   border: 1px solid rgb(21 19 13 / 0.12);
   box-shadow: 10px 10px 0 #007a68;
+  overflow: hidden;
+}
+
+.location-photo {
+  aspect-ratio: 1.2 / 1;
+  background: #15130d;
+  overflow: hidden;
+}
+
+.location-photo img {
+  transition: transform 600ms ease;
+}
+
+.location-card:hover .location-photo img {
+  transform: scale(1.06);
+}
+
+.location-card-content {
   padding: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.location-card h2 {
+.location-card-content h2 {
   font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 900;
   line-height: 0.86;
