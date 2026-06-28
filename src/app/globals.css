@@ -605,6 +605,114 @@ img {
   transform: scale(1.08);
 }
 
+.live-menu-card {
+  background: #fff4d7;
+  border: 1px solid rgb(21 19 13 / 0.1);
+  min-height: 19rem;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 240ms ease, transform 240ms ease;
+}
+
+.live-menu-card img {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.live-menu-card h3 {
+  color: #15130d;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+  line-height: 0.95;
+  padding: 1.1rem;
+  text-transform: lowercase;
+}
+
+.live-menu-card:hover {
+  box-shadow: 9px 9px 0 #007a68;
+  transform: translateY(-4px);
+}
+
+.live-menu-card:hover img {
+  transform: scale(1.08);
+}
+
+.live-menu-card-dark {
+  background: rgb(255 244 215 / 0.08);
+  border-color: rgb(255 244 215 / 0.18);
+}
+
+.live-menu-card-dark h3 {
+  color: #fff4d7;
+}
+
+.menu-board-card {
+  background: #fff4d7;
+  box-shadow: 8px 8px 0 rgb(0 122 104 / 0.22);
+  display: block;
+  overflow: hidden;
+  transition: box-shadow 240ms ease, transform 240ms ease;
+}
+
+.menu-board-card img {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: contain;
+}
+
+.menu-board-card:hover {
+  box-shadow: 12px 12px 0 #007a68;
+  transform: translateY(-4px);
+}
+
+.location-card {
+  background: #fff4d7;
+  border: 1px solid rgb(21 19 13 / 0.12);
+  box-shadow: 10px 10px 0 #007a68;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.location-card h2 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.86;
+}
+
+.location-address {
+  color: rgb(21 19 13 / 0.72);
+  display: grid;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.45;
+  margin-top: 1.5rem;
+}
+
+.location-row {
+  border-top: 1px solid rgb(21 19 13 / 0.14);
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.location-row span {
+  color: #d94a20;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.location-row strong,
+.location-row a {
+  color: #15130d;
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
 .reveal-on-scroll {
   --reveal-scale: 0.985;
   --reveal-x: 0px;

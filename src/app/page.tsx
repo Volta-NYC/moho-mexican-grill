@@ -7,22 +7,22 @@ import { images, site } from "@/lib/content"
 const menuCategories = [
   {
     href: "/menu",
-    image: images.plate,
+    image: images.buildNachos,
     title: "Build Your Own"
   },
   {
     href: "/tacos",
-    image: images.oysters,
+    image: images.birriaTacos,
     title: "birria"
   },
   {
     href: "/menu",
-    image: images.pasta,
+    image: images.chipsBag,
     title: "side orders"
   },
   {
     href: "/menu",
-    image: images.wineRoom,
+    image: images.dessertChurros,
     title: "desserts"
   }
 ]
