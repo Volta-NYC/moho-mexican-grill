@@ -42,7 +42,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-6 md:grid-cols-2">
               {locations.map((location, index) => (
-                <article className="location-card moho-fade-up" key={location.name} style={{ animationDelay: `${index * 100}ms` }}>
+                <article className={`location-card reveal-on-scroll reveal-lift ${index === 0 ? "reveal-tilt-left" : "reveal-tilt-right reveal-delay-1"}`} key={location.name}>
                   <div className="location-photo">
                     <Photo alt={location.imageAlt} src={location.image} />
                   </div>

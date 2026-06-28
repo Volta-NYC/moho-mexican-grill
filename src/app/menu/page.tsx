@@ -121,7 +121,7 @@ function MenuGallery({
         </div>
         <div className={`mt-12 grid gap-5 ${items.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3 lg:grid-cols-5"}`}>
           {items.map((item, index) => (
-            <article className={`live-menu-card moho-fade-up ${dark ? "live-menu-card-dark" : ""}`} key={item.title} style={{ animationDelay: `${index * 80}ms` }}>
+            <article className={`live-menu-card reveal-on-scroll reveal-lift ${index % 2 === 0 ? "reveal-tilt-left" : "reveal-tilt-right"} ${index === 1 ? "reveal-delay-1" : index === 2 ? "reveal-delay-2" : index > 2 ? "reveal-delay-3" : ""} ${dark ? "live-menu-card-dark" : ""}`} key={item.title}>
               <Photo alt={item.title} src={item.image} />
               <h3>{item.title}</h3>
             </article>

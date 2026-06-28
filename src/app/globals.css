@@ -197,7 +197,7 @@ img {
 }
 
 .nav-link-dark {
-  color: rgb(159 207 72 / 0.96);
+  color: rgb(0 122 104 / 0.98);
 }
 
 .nav-link-dark::before {
@@ -205,7 +205,7 @@ img {
 }
 
 .nav-link-dark:hover {
-  color: #fff4d7;
+  color: #9fcf48;
 }
 
 .nav-link-light {
@@ -221,12 +221,12 @@ img {
 }
 
 .site-mobile-link-dark {
-  color: rgb(159 207 72 / 0.96);
+  color: rgb(0 122 104 / 0.98);
   transition: color 200ms ease;
 }
 
 .site-mobile-link-dark:hover {
-  color: #fff4d7;
+  color: #9fcf48;
 }
 
 .site-mobile-link-light {
@@ -751,18 +751,19 @@ img {
 }
 
 .reveal-on-scroll {
+  --reveal-rotate: 0deg;
   --reveal-scale: 0.985;
   --reveal-x: 0px;
   --reveal-y: 34px;
   opacity: 0;
-  transform: translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0) rotate(var(--reveal-rotate)) scale(var(--reveal-scale));
   transition: opacity 720ms ease, transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
 .reveal-on-scroll.is-visible {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
   will-change: auto;
 }
 
@@ -781,12 +782,29 @@ img {
   --reveal-y: 18px;
 }
 
+.reveal-lift {
+  --reveal-scale: 0.955;
+  --reveal-y: 54px;
+}
+
+.reveal-tilt-left {
+  --reveal-rotate: -2.5deg;
+}
+
+.reveal-tilt-right {
+  --reveal-rotate: 2.5deg;
+}
+
 .reveal-delay-1 {
   transition-delay: 90ms;
 }
 
 .reveal-delay-2 {
   transition-delay: 180ms;
+}
+
+.reveal-delay-3 {
+  transition-delay: 270ms;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -75,7 +75,7 @@ export default function HomePage() {
 
         <section className="bg-paper px-4 py-24 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="moho-fade-up text-center">
+            <div className="reveal-on-scroll reveal-soft text-center">
               <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-tomato">The Menu</p>
               <h2 className="mx-auto mt-5 max-w-4xl text-4xl font-black leading-[1.02] sm:text-6xl">
                 MOHO has something to satisfy every palate and dietary need.
@@ -87,14 +87,14 @@ export default function HomePage() {
 
             <div className="mt-14 grid gap-5 md:grid-cols-4">
               {menuCategories.map((item, index) => (
-                <Link className="moho-menu-card moho-fade-up" href={item.href} key={item.title}>
+                <Link className={`moho-menu-card reveal-on-scroll reveal-lift ${index % 2 === 0 ? "reveal-tilt-left" : "reveal-tilt-right"} ${index === 1 ? "reveal-delay-1" : index === 2 ? "reveal-delay-2" : index === 3 ? "reveal-delay-3" : ""}`} href={item.href} key={item.title}>
                   <Photo alt={item.title} className="absolute inset-0 transition duration-700" src={item.image} />
                   <span>{item.title}</span>
                 </Link>
               ))}
             </div>
 
-            <div className="mt-12 text-center">
+            <div className="reveal-on-scroll reveal-soft reveal-delay-2 mt-12 text-center">
               <Link className="button button-dark" href="/menu">See Our Full Menu</Link>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
             </div>
             <div className="grid gap-4">
               {faqs.map((faq, index) => (
-                <details className="moho-faq moho-fade-up" key={faq.question} open={index === 0}>
+                <details className={`moho-faq reveal-on-scroll reveal-right ${index === 1 ? "reveal-delay-1" : index === 2 ? "reveal-delay-2" : index > 2 ? "reveal-delay-3" : ""}`} key={faq.question} open={index === 0}>
                   <summary>{faq.question}</summary>
                   <p>{faq.answer}</p>
                 </details>
@@ -124,7 +124,7 @@ export default function HomePage() {
             <Photo alt="Moho catering spread" src={images.cateringHero} />
           </div>
           <div className="absolute inset-0 bg-ink/62" />
-          <div className="moho-fade-up relative z-10 mx-auto max-w-5xl text-center">
+          <div className="reveal-on-scroll reveal-soft relative z-10 mx-auto max-w-5xl text-center">
             <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-gold">Hosting a Party or Event?</p>
             <h2 className="mt-6 text-5xl font-black leading-[0.95] sm:text-7xl">
               Contact us for all your Catering needs!
