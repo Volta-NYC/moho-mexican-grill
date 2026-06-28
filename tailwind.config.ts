@@ -8,7 +8,7 @@ const config: Config = {
         ink: "#15130d",
         paper: "#f0dfbd",
         tomato: "#d94a20",
-        olive: "#59652f",
+        olive: "#007a68",
         cream: "#fff4d7",
         gold: "#f4bf24"
       },

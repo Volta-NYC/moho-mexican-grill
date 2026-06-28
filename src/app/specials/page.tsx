@@ -7,8 +7,10 @@ export default function SpecialsPage() {
   return (
     <PageShell>
       <main className="bg-ink text-cream">
-        <section className="px-4 pb-16 pt-36 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative overflow-hidden px-4 pb-16 pt-36 sm:px-6 lg:px-8">
+          <div className="moho-green-orb" />
+          <div className="relative mx-auto max-w-7xl">
+            <span className="moho-green-tag mb-7">Your way, all day</span>
             <SectionHeading eyebrow="Featured" light title="Ordering, catering, and Queens locations." text="Moho's featured actions point guests toward the right next step." />
           </div>
         </section>

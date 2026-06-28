@@ -30,12 +30,14 @@ export default function CateringPage() {
     <PageShell>
       <main className="bg-paper">
         <section className="relative overflow-hidden bg-ink px-4 pb-20 pt-36 text-cream sm:px-6 lg:px-8">
+          <div className="moho-green-orb" />
           <div className="absolute inset-0 opacity-28">
             <Photo alt="Moho catering spread" src={images.cateringHero} />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/35" />
           <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.82fr] lg:items-end">
             <div>
+              <span className="moho-green-tag mb-7">Fresh group spreads</span>
               <SectionHeading eyebrow="Catering" light title={catering.title} text={catering.paragraphs.slice(0, 2).join(" ")} />
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a className="button button-gold" href={site.cateringExternalUrl}>Order Catering</a>
@@ -58,7 +60,7 @@ export default function CateringPage() {
               <div className="overflow-hidden rounded-[1.5rem] shadow-2xl shadow-ink/18">
                 <Photo alt="Moho event table" className="aspect-[4/5]" src={images.cateringParty} />
               </div>
-              <div className="absolute -bottom-8 left-6 right-6 bg-tomato p-6 text-cream shadow-xl shadow-ink/20">
+              <div className="absolute -bottom-8 left-6 right-6 bg-olive p-6 text-cream shadow-xl shadow-ink/20">
                 <p className="eyebrow text-gold">Group Meals</p>
                 <p className="mt-2 font-heading text-3xl font-black leading-tight">Fresh Mexican grill catering for groups of all sizes.</p>
               </div>

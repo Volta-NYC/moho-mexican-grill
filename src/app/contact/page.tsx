@@ -7,9 +7,11 @@ export default function ContactPage() {
   return (
     <PageShell>
       <main className="bg-paper">
-        <section className="grid min-h-screen bg-ink pt-20 text-cream lg:grid-cols-[0.95fr_1.05fr]">
+        <section className="relative grid min-h-screen overflow-hidden bg-ink pt-20 text-cream lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="moho-green-orb" />
           <div className="flex items-center px-4 py-20 sm:px-6 lg:px-12">
             <div className="max-w-2xl">
+              <span className="moho-green-tag mb-7">Astoria and Bayside</span>
               <SectionHeading eyebrow="Locations" light title="Find Moho Mexican Grill." text="Moho Mexican Grill has convenient locations in Astoria and Bayside, Queens." />
               <div className="mt-9 grid gap-3 text-lg font-bold text-cream/78">
                 <a href={site.emailHref}>{site.email}</a>
@@ -41,7 +43,7 @@ export default function ContactPage() {
                   {site.addressLine2}
                 </p>
               </article>
-              <article className="bg-tomato p-7 text-cream shadow-[8px_8px_0_#1f1b16]">
+              <article className="bg-olive p-7 text-cream shadow-[8px_8px_0_#1f1b16]">
                 <h2 className="font-heading text-4xl font-black">Hours</h2>
                 <div className="mt-5 space-y-2 text-base font-bold leading-7 text-cream/80">
                   {hours.map((item) => (
