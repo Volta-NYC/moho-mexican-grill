@@ -142,6 +142,14 @@ img {
   text-shadow: 0 1px 18px rgb(0 0 0 / 0.56);
 }
 
+.site-header-on-light {
+  text-shadow: 0 2px 16px rgb(0 0 0 / 0.5), 0 1px 2px rgb(0 0 0 / 0.6);
+}
+
+.site-header-on-light img {
+  filter: drop-shadow(0 2px 10px rgb(0 0 0 / 0.38));
+}
+
 .site-header-on-dark img {
   filter: drop-shadow(0 1px 10px rgb(0 0 0 / 0.45));
 }
@@ -189,15 +197,15 @@ img {
 }
 
 .nav-link-dark {
-  color: rgb(21 19 13 / 0.76);
+  color: rgb(159 207 72 / 0.96);
 }
 
 .nav-link-dark::before {
-  background: #007a68;
+  background: #f0c35a;
 }
 
 .nav-link-dark:hover {
-  color: #007a68;
+  color: #fff4d7;
 }
 
 .nav-link-light {
@@ -213,12 +221,12 @@ img {
 }
 
 .site-mobile-link-dark {
-  color: rgb(21 19 13 / 0.78);
+  color: rgb(159 207 72 / 0.96);
   transition: color 200ms ease;
 }
 
 .site-mobile-link-dark:hover {
-  color: #007a68;
+  color: #fff4d7;
 }
 
 .site-mobile-link-light {
